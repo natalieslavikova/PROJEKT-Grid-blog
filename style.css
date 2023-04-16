@@ -65,4 +65,70 @@ blockquote {
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
+h1{
+	font-size: 80px;
+	color: #a3cb38;
+}
 
+h2 {
+	font-size: 60px;
+	color: #a3cb38;
+	grid-column: 2;
+}
+
+blockquote {
+	font-size: 30px;
+	color: #636e72;
+	grid-column: 1 / -1;
+	justify-self: center;
+	align-self: center;
+}
+
+.meta {
+	color: #636e72;
+}
+
+
+
+.blog {
+	display: grid;
+	grid-template-columns: [levy] 1fr [stred] 4fr [pravy] 2fr;
+	column-gap: 40px;
+}
+
+header {
+	grid-column: 2;
+}
+
+figure {
+	grid-column: 1 / -1;
+	margin: 0;
+}
+
+.tip {
+	display: flex;
+}
+.tip-vlevo {
+	flex-wrap: wrap;
+	grid-column: 1;
+	background-color: #636e72;
+	justify-self: end;
+	align-self: end;
+}
+
+p {
+	grid-column: 2;
+}
+
+.tip-vlevo img {
+	width: 200px;
+	height: 200px;
+}
+
+.tip-vpravo {
+	grid-column: 3;
+}
+
+footer {
+	grid-column: 2;
+}
