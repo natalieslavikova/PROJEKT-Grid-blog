@@ -74,21 +74,45 @@ h2 {
 	font-size: 60px;
 	color: #a3cb38;
 	grid-column: 2;
+	margin-top: 40px;
+	margin-bottom: 10px;
 }
 
 blockquote {
-	font-size: 30px;
-	color: #636e72;
-	grid-column: 1 / -1;
-	justify-self: center;
-	align-self: center;
+    font-size: 30px;
+    color: #636e72;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+	margin: 50px;
+}
+
+blockquote::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #c4e538;
+    position: absolute;
+    left: 40%;
+    width: 150px;
+	top: -20px;
+}
+
+blockquote::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #c4e538;
+    position: absolute;
+    left: 40%;
+    bottom: -20px;
+    width: 150px;
 }
 
 .meta {
 	color: #636e72;
 }
-
-
 
 .blog {
 	display: grid;
@@ -102,18 +126,57 @@ header {
 
 figure {
 	grid-column: 1 / -1;
-	margin: 0;
+	margin-bottom: 40px;
+	color: #636e72;
+	margin-left: 0;
+	margin-right: 0;
 }
 
+
 .tip {
-	display: flex;
-}
-.tip-vlevo {
-	flex-wrap: wrap;
-	grid-column: 1;
-	background-color: #636e72;
+	background-color: #edf3f5;
 	justify-self: end;
-	align-self: end;
+    align-self: end;
+    margin-bottom: 20px;
+    text-align: right;
+    position: relative;	
+}
+
+.tip a {
+	color:#ee5a24 ;	
+}
+
+.tip-vlevo {
+	grid-column: 1;
+	padding: 10px;
+}
+
+.tip-vlevo::after {
+	content: "";
+  display: block;
+  background-color: #f79f1f;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -3px;
+  writing-mode: vertical-rl;
+}
+
+.tip-vpravo {
+	grid-column: 3;
+}
+
+.tip-vpravo::before {
+	content: "";
+  display: block;
+  background-color: #f79f1f;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -3px;
+  writing-mode: vertical-rl;
 }
 
 p {
@@ -121,8 +184,8 @@ p {
 }
 
 .tip-vlevo img {
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 }
 
 .tip-vpravo {
@@ -131,4 +194,17 @@ p {
 
 footer {
 	grid-column: 2;
+	color:#b2bec3;
+	margin-top: 40px;
 }
+
+footer a {
+	color:#b2bec3;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+	grid-column: 1 / -1;
+}
+
